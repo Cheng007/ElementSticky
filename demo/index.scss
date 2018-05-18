@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 50vh;
+  background: lightcyan;
+}
+
+main {
+  display: flex;
+  aside {
+    width: 20vw;
+    background: orange;
+  }
+  .table-wrap {
+    width: calc(100vw - 20vw);
+    overflow: hidden;
+  }
+}
+
+table {
+  width: 300vw;
+  border-collapse: collapse;
+  thead {
+    background: #eee;
+  }
+  th,
+  td {
+    border: 1px solid #ccc;
+    line-height: 50px;
+  }
+  td {
+    text-align: center;
+  }
+}
+
+footer {
+  height: 200vh;
+  background: lightcyan
+}

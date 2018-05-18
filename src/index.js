@@ -8,6 +8,7 @@
  *  'bottomSticky': 粘住目标元素于容器的下方
  *  'hScrollSticky': 粘住目标元素的水平滚动条于容器下方
  */
+// TODO: 采用 reuqestAnimationFram 提高性能 
 class ElementSticky {
   constructor({ target, container, offset = 0, action } = {}) {
     if (!target)
@@ -120,7 +121,7 @@ class ElementSticky {
           pointer-events: none;
           `;
       this.setVirtualPosition();
-      
+
       this.virtualWrap.scrollLeft = this.container.scrollLeft;
     }
   }
@@ -130,10 +131,10 @@ class ElementSticky {
       cTop = this.container.getBoundingClientRect().top,
       os = this.offset,
       clientHeight = document.documentElement.clientHeight,
-      bottom = cTop > clientHeight ? clientHeight - cTop : -this.offset;
+      bottom = cTop > clientHeight ? clientHeight - cTop : -this.offset,
+      bundary = clientHeight - (tBottom - os);
 
-    this.virtualWrap.style.position = clientHeight >= tBottom - os ? 'static' : 'fixed';
-    this.virtualWrap.style.bottom = bottom + 'px';
+    this.virtualWrap.style.bottom = `${bundary >= 0 ? bundary : bottom}px`;
   }
 
   distory() {
@@ -162,11 +163,11 @@ class ElementSticky {
   }
 
   static _isElement(el) {
-    return !!el 
-      && typeof el.nodeName === 'string' 
-      && el.nodeType === 1 
+    return !!el
+      && typeof el.nodeName === 'string'
+      && el.nodeType === 1
       && Element.prototype.isPrototypeOf(el);
   }
 }
 
-export { ElementSticky };
+export default ElementSticky;

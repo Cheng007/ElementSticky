@@ -1,0 +1,25 @@
+{
+  "name": "element-sticky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel demo/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cheng007/ElementSticky.git"
+  },
+  "keywords": [],
+  "author": "Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cheng007/ElementSticky/issues"
+  },
+  "homepage": "https://github.com/Cheng007/ElementSticky#readme",
+  "dependencies": {
+    "node-sass": "^4.9.0",
+    "parcel-bundler": "^1.8.1"
+  }
+}
