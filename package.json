@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheng007/ElementSticky.git"
+    "url": "git+https://github.com/Cheng007/element-sticky.git"
   },
   "keywords": [],
   "author": "Cheng",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cheng007/ElementSticky/issues"
+    "url": "https://github.com/Cheng007/element-sticky/issues"
   },
-  "homepage": "https://github.com/Cheng007/ElementSticky#readme",
+  "homepage": "https://github.com/Cheng007/element-sticky#readme",
   "dependencies": {
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.8.1"
