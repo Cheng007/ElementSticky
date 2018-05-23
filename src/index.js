@@ -131,10 +131,10 @@ class ElementSticky {
       cTop = this.container.getBoundingClientRect().top,
       os = this.offset,
       clientHeight = document.documentElement.clientHeight,
-      bottom = cTop > clientHeight ? clientHeight - cTop : -this.offset,
-      bundary = clientHeight - (tBottom - os);
+      bottom = cTop > clientHeight ? clientHeight - cTop : -this.offset;
 
-    this.virtualWrap.style.bottom = `${bundary >= 0 ? bundary : bottom}px`;
+    this.virtualWrap.style.position = clientHeight >= tBottom - os ? 'static' : 'fixed';
+    this.virtualWrap.style.bottom = bottom + 'px';
   }
 
   distory() {

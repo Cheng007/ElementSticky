@@ -17,8 +17,11 @@ main {
     width: 20vw;
     background: orange;
   }
-  .table-wrap {
+  .container {
     width: calc(100vw - 20vw);
+  }
+  .table-wrap {
+    width: 100%;
     overflow: hidden;
   }
 }
